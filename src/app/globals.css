@@ -67,3 +67,7 @@
   background-size: 50px 50px;
   opacity: 0.03;
 }
+
+@utility text-purple {
+  color: var(--color-purple);
+}
