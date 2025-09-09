@@ -1,16 +1,19 @@
-// import { useState } from "react";
+"use client"
+
+
 import { IoCopyOutline } from "react-icons/io5";
 
 
-// import Lottie from "react-lottie";
+import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
 
 
 import { BackgroundGradientAnimation } from "./GradientBg";
-// import animationData from "@/data/confetti.json";
+import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { GlobeDemo } from "./GridGlobe";
+import { useState } from "react";
 
 
 export const BentoGrid = ({
@@ -56,22 +59,22 @@ export const BentoGridItem = ({
     const leftLists = ["ReactJS", "Express", "Typescript"];
     const rightLists = ["Next.js", "MongoDB", "Node.js"];
 
-    // const [copied, setCopied] = useState(false);
+    const [copied, setCopied] = useState(false);
 
-    // const defaultOptions = {
-    //     loop: copied,
-    //     autoplay: copied,
-    //     animationData: animationData,
-    //     rendererSettings: {
-    //         preserveAspectRatio: "xMidYMid slice",
-    //     },
-    // };
+    const defaultOptions = {
+        loop: copied,
+        autoplay: copied,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: "xMidYMid slice",
+        },
+    };
 
-    // const handleCopy = () => {
-    //     const text = "hsu@jsmastery.pro";
-    //     navigator.clipboard.writeText(text);
-    //     setCopied(true);
-    // };
+    const handleCopy = () => {
+        const text = "nnaumenko83@gmail.com";
+        navigator.clipboard.writeText(text);
+        setCopied(true);
+    };
 
     return (
         <div
@@ -168,17 +171,16 @@ export const BentoGridItem = ({
                             </div>
                         </div>
                     )}
-                    {/* {id === 6 && (
+                    {id === 6 && (
                         <div className="mt-5 relative">
-                 
+
                             <div
                                 className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
                                     }`}
                             >
-                               
+
                                 <Lottie options={defaultOptions} height={200} width={400} />
                             </div>
-
                             <MagicButton
                                 title={copied ? "Email is Copied!" : "Copy my email address"}
                                 icon={<IoCopyOutline />}
@@ -187,7 +189,7 @@ export const BentoGridItem = ({
                                 otherClasses="!bg-[#161A31]"
                             />
                         </div>
-                    )} */}
+                    )}
                 </div>
             </div>
         </div>
