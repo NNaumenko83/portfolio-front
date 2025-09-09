@@ -112,3 +112,7 @@
 @utility text-purple {
   color: var(--color-purple);
 }
+
+@utility heading {
+  @apply font-bold text-4xl md:text-5xl text-center;
+}
