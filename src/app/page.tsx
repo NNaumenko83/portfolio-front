@@ -1,4 +1,3 @@
-import Approach from "@/components/approach/approach";
 import Experience from "@/components/experience/experience";
 import Footer from "@/components/footer/footer";
 import Grid from "@/components/grid/Grid";
